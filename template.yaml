@@ -1,0 +1,11 @@
+Resources:
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-df5de721
+      InstanceType: t2.micro
+      UserData: 
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          docker run -d -p 8080:8080 spring-hello
+

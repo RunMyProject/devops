@@ -1,0 +1,17 @@
+---
+- name: Configurazione iniziale del server di Edoardo
+  hosts: mio_server
+  tasks:
+    - name: Crea una directory per i log di Spring
+      file:
+        path: /home/edoardo/app_logs
+        state: directory
+        mode: '0755'
+
+    - name: Crea un file di benvenuto personalizzato
+      copy:
+        content: "Benvenuto Edoardo, questo server e' gestito da Ansible!\n"
+        dest: /home/edoardo/app_logs/readme.txt
+
+    - name: Assicurati che il container Spring sia attivo
+      shell: docker run -d --name mio-spring -p 8080:8080 spring-hello
