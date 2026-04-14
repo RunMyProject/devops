@@ -79,7 +79,8 @@ devops/
 ├── myplaybook.sh                 # Runs the Ansible playbook against hosts.ini
 ├── ansiblestop.sh                # Stops and removes the running Spring container
 │
-└── infrastruttura-cloud.it.md    # Italian conceptual guide (see docs/)
+├── infrastruttura-cloud.it.md    # Italian conceptual guide (see docs/)
+└── devops-cloud-infrastructure.md # Conceptual guide (see docs/)
 ```
 
 ---
